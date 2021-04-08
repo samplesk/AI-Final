@@ -1,20 +1,17 @@
-#learning from 18 attributes (animal name, 15 Boolean, 2 numerics)
-#The final number is the set it falls into, 1 through 7
- 
-#loop for lines in set
-#loop for each attribute
-#define each seperate?
-    #name
-    #hair
-    #feathers
-    #lays eggs
-    #makes milk
-    #can fly
-    #is aquatic
-    #.....
-#compile and decide which of 7 categories it goes in
+import numpy as pydataPath 
+import numpy as np
+import pandas as pd 
+#from sklearn.model_selection import train_test_split
+from sklearn import preprocessing
+from sklearn import datasets
+#from sklearn.ensemble import RandomForestRegressor
+from sklearn.pipeline import make_pipeline
+#from sklearn.model_selection import GridSearchCV
+#from sklearn.metrics import mean_squared_error, r2_score
+from sklearn import tree
+from sklearn.tree import DecisionTreeClassifier
 
-#pip install -U scikit-learn
-#pip install numpy
-#python -m pip install --user numpy scipy matplotlib ipython jupyter pandas sympy nose
 
+import csv
+digits = pd.read_csv("data.csv", header=None)
+print(digits)
