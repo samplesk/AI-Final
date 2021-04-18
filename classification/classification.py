@@ -1,4 +1,5 @@
 #cd..\AI-Final
+#cd classification
 
 import numpy as pydataPath 
 import numpy as np
@@ -13,6 +14,14 @@ from sklearn import tree
 from sklearn.tree import DecisionTreeClassifier
 import pandas as pd 
 import csv
+import xlsxwriter
 
-digits = pd.read_csv("student-por.csv", header=1)
+X = [[101, 0], [18, 0]]
+Y = [101, 18]
+clf = tree.DecisionTreeClassifier()
+clf = clf.fit(X, Y)
+
+digits = pd.read_csv("zoo.data", header=None)
+#digits = pd.read_csv("student-por.csv", header=1)
+#digits = pd.read_excel("Real estate valuation data set.xlsx", header=0)
 print(digits)
