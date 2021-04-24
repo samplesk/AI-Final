@@ -7,7 +7,9 @@ from sklearn.model_selection import train_test_split
 from matplotlib import pyplot as plt
 
 # Path of the file to read
-myData = pd.read_csv(r'C:\Users\victo\Downloads\RealEstDataSet.csv', header=1)
+myData = pd.read_csv('../classification/realEstate.csv') # Switched to using a relative file path, and did not drop the header names
+# I'm not sure if this is the same file. At the very least, you seem to have changed the names of the columns. You should really
+# be accessing a file inside of your repo, not somewhere else where the code can't find it.
 #this below doesn't work, I just thought maybe if I could rename the colums then my X=[['houseAge']] would work
 #myData = myData.rename(columns=['number','X1','houseAge','X3','X4','X5','X6','housePrice'], inplace = False)
 print(myData.shape)
@@ -18,10 +20,10 @@ print(myData.shape)
 #### doesn't work, I was trying to make sure that my names were right
 #print(myData.feature_names)
 #### doesn't work, don't know why
-X = myData[['houseAge']]
+X = myData[['X2 house age']] # The column name in the CSV I found was "X2 house age"
 #### below, I was thinking maybe I could just grab the 3rd column and it work.
 #X = myData[3]
-y = myData[['housePrice']]
+y = myData[['Y house price of unit area']] # Another difference in the name of the column
 ###I tried to just print them after trying
 #print(X)
 #print(y)
@@ -35,7 +37,7 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.3, train_size
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 ###this should just output a score, but doesn't
-model.score(X_test, y_test)
+model.score(X_test, y_test) # This model is not defined. You are going to have to give me a better version of this code to work with if you want more help
 
 ###this is where I tried to just get a visual of it, it should take the 3rd column and y_train and plot it
 #plt.scatter(X.T[3], y_train)
