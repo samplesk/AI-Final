@@ -29,7 +29,7 @@ y = myData[['housePrice']]
 #split the data set into 1/3 for test and 2/3 for training
 # from sklearn.model_selection import train_test_split
 ### this is the test split I have tried doing,It should take my X and Y and split it into a training set of X_train and Y_train
-X_train, X_test, y_train, y_test = train_test_split(X,y.target,test_size=.3, train_size=1) 
+X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=.3, train_size=1) 
 
 #from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
