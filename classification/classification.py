@@ -51,7 +51,7 @@ X = student_por[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup
 y = student_por[['G3']]
 
 knn = neighbors.KNeighborsClassifier(n_neighbors = 25, weights = 'distance')
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, train_size = 1)
 
 knn.fit(X_train,y_train)
 prediction = knn.predict(X_test)
