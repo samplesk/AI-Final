@@ -112,5 +112,5 @@ prediction = knn.predict(X_test)
 r2 = metrics.r2_score(y_test, prediction)
 maxError = metrics.max_error(y_test, prediction)
 
-print("r2", r2)
-print("max error", maxError)
+print("r2: ", r2)
+print("max error: ", maxError)
