@@ -46,36 +46,9 @@ realEstate = pd.read_csv("realEstate.csv")
 
 # #X = student_por[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences']]
 # ### with G1 & G2, better predictions
-# X = student_por[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
+X = student_por[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
 
-# y = student_por[['G3']]
-
-# knn = neighbors.KNeighborsClassifier(n_neighbors = 25, weights = 'distance')
-# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
-
-# knn.fit(X_train,y_train)
-# prediction = knn.predict(X_test)
-# pred_decision = knn.predict_proba(X_test)
-
-# accuracy = metrics.accuracy_score(y_test, prediction)
-# f1Score_macro = metrics.f1_score(y_test, prediction, average = 'macro')
-# f1Score_micro = metrics.f1_score(y_test, prediction, average = 'micro')
-# f1Score_weighted = metrics.f1_score(y_test, prediction, average = 'weighted')
-# hingeLoss = metrics.hinge_loss(y_test, pred_decision)
-
-# print("accuracy: ", accuracy)
-# print("f1Score_macro: ", f1Score_macro)
-# print("f1Score_micro: ", f1Score_micro)
-# print("f1Score_weighted: ", f1Score_weighted)
-# print("hingeLoss: ", hingeLoss)
-
-###----------------------math
-
-# #X = student_mat[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences']]
-
-# ### with G1 & G2, better predictions
-X = student_mat[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
-y = student_mat[['G3']]
+y = student_por[['G3']]
 
 knn = neighbors.KNeighborsClassifier(n_neighbors = 25, weights = 'distance')
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, train_size = 1)
@@ -95,6 +68,33 @@ print("f1Score_macro: ", f1Score_macro)
 print("f1Score_micro: ", f1Score_micro)
 print("f1Score_weighted: ", f1Score_weighted)
 print("hingeLoss: ", hingeLoss)
+
+###----------------------math
+
+# #X = student_mat[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences']]
+
+# # ### with G1 & G2, better predictions
+# X = student_mat[['Medu', 'Fedu', 'traveltime','studytime','failures', 'schoolsup', 'famsup', 'paid', 'activities', 'nursery', 'higher', 'internet', 'romantic', 'famrel', 'freetime', 'goout', 'Dalc', 'Walc', 'health', 'absences', 'G1', 'G2']]
+# y = student_mat[['G3']]
+
+# knn = neighbors.KNeighborsClassifier(n_neighbors = 25, weights = 'distance')
+# X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3)
+
+# knn.fit(X_train,y_train)
+# prediction = knn.predict(X_test)
+# pred_decision = knn.predict_proba(X_test)
+
+# accuracy = metrics.accuracy_score(y_test, prediction)
+# f1Score_macro = metrics.f1_score(y_test, prediction, average = 'macro')
+# f1Score_micro = metrics.f1_score(y_test, prediction, average = 'micro')
+# f1Score_weighted = metrics.f1_score(y_test, prediction, average = 'weighted')
+# hingeLoss = metrics.hinge_loss(y_test, pred_decision)
+
+# print("accuracy: ", accuracy)
+# print("f1Score_macro: ", f1Score_macro)
+# print("f1Score_micro: ", f1Score_micro)
+# print("f1Score_weighted: ", f1Score_weighted)
+# print("hingeLoss: ", hingeLoss)
 
 #---------------------realEstate
 
