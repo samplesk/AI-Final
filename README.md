@@ -5,6 +5,7 @@ F1: Conveys the balance between the precision and the recall, an additional test
 Hinge Loss: another measure of accuracy, but scaled with 0 as the best.
 We have chosen three different datasets to run through three different models. This should give an insight into not only which models are best, but what data types work we will them.
 
+Results:
 Classification Model, KNN: We used the k nearest neighbors classification and regression model. This model learns from 70% of the dataset given and attempts to predict on the remaining 30% using 25 of its nearest neighbors with a bias on the closest neighbors. 
 
 Regression Model: Linear
