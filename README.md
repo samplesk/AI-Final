@@ -6,7 +6,7 @@ Hinge Loss: another measure of accuracy, but scaled with 0 as the best.
 We have chosen three different datasets to run through three different models. This should give an insight into not only which models are best, but what data types work we will them.
 
 Results:
-Classification Model, KNN: We used the k nearest neighbors classification and regression model. This model learns from 70% of the dataset given and attempts to predict on the remaining 30% using 25 of its nearest neighbors with a bias on the closest neighbors. 
+The classification model we chose was a k nearest neighbors model. We used 25 nearest neighbors and were biased by their distance. We also learned from 70% of the data sets and predicted on the remaining 30%. The model did the best on the zoo data, which was expected, with an 87% accuracy rate. The model did only slightly worse on the real estate valuation data at around 73% accuracy. The model struggled with the student performance data with a 36% and 32% accuracy on each half.
 
 Regression Model: Linear
 
